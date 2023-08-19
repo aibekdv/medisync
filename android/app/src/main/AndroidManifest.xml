@@ -2,7 +2,7 @@
         <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:label="medisync"
+        android:label="MediSync"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
 
