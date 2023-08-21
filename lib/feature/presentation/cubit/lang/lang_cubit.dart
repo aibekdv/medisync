@@ -20,7 +20,6 @@ class LangCubit extends Cubit<LangState> {
       final langCode = prefs.getString("CASHED_LANG");
       emit(ChangeLang(locale: Locale(langCode ?? "en")));
     } catch (e) {
-      log("Language not changed");
       throw CacheException();
     }
   }

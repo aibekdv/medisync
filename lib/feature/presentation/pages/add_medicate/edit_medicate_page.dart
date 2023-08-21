@@ -75,13 +75,18 @@ class _EditMedicatePageState extends State<EditMedicatePage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.primary,
         title: Text(
           S.of(context).editMedicine,
-          style: const TextStyle(fontSize: 20),
+          style: const TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
         ),
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
           icon: const Icon(Icons.close),
+          color: Colors.white,
         ),
         actions: [
           IconButton(
@@ -90,16 +95,10 @@ class _EditMedicatePageState extends State<EditMedicatePage> {
               Icons.done,
               size: 28,
             ),
+            color: Colors.white,
           ),
           const SizedBox(width: 10),
         ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(1.0),
-          child: Container(
-            color: AppColors.grey,
-            height: 1.0,
-          ),
-        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -181,29 +180,25 @@ class _EditMedicatePageState extends State<EditMedicatePage> {
                           ],
                         ),
                         if (selectedDays.isNotEmpty)
-                          SingleChildScrollView(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const SizedBox(height: 5),
-                                ...selectedDays.map(
-                                  (e) => DayContainerWidget(
-                                    onTap: () {
-                                      selectedDays.remove(e);
-                                      for (var i = 0;
-                                          i < weekdays.length;
-                                          i++) {
-                                        if (e.id == weekdays[i].id) {
-                                          weekdays[i].checked = false;
-                                        }
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 5),
+                              ...selectedDays.map(
+                                (e) => DayContainerWidget(
+                                  onTap: () {
+                                    selectedDays.remove(e);
+                                    for (var i = 0; i < weekdays.length; i++) {
+                                      if (e.id == weekdays[i].id) {
+                                        weekdays[i].checked = false;
                                       }
-                                      setState(() {});
-                                    },
-                                    titleDay: e.name,
-                                  ),
+                                    }
+                                    setState(() {});
+                                  },
+                                  titleDay: e.name,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                       ],
                     ),
@@ -252,6 +247,7 @@ class _EditMedicatePageState extends State<EditMedicatePage> {
                           Wrap(
                             alignment: WrapAlignment.start,
                             spacing: 10,
+                            runSpacing: 13,
                             children: [
                               ...selectedTimes.map(
                                 (e) => TimeContainerWidget(
@@ -266,6 +262,7 @@ class _EditMedicatePageState extends State<EditMedicatePage> {
                           ),
                       ],
                     ),
+                    const SizedBox(height: 15),
                   ],
                 ),
               ],

@@ -39,7 +39,6 @@ final class MedicationDataSourceImpl implements MedicationDataSource {
         conflictAlgorithm: ConflictAlgorithm.replace,
       );
     } catch (e) {
-      print('Error adding medication: $e');
       throw CacheException();
     }
   }
@@ -57,7 +56,6 @@ final class MedicationDataSourceImpl implements MedicationDataSource {
         whereArgs: [medicationId],
       );
     } catch (e) {
-      print('Error deleting medication: $e');
       throw CacheException();
     }
   }
@@ -77,7 +75,6 @@ final class MedicationDataSourceImpl implements MedicationDataSource {
         whereArgs: [medicationId],
       );
     } catch (e) {
-      print('Error updating medication: $e');
       throw CacheException();
     }
   }

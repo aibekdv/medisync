@@ -16,6 +16,8 @@ class MedicationItemWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        width: 165,
+        height: 165,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -49,6 +51,8 @@ class MedicationItemWidget extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      decoration: TextDecoration.none,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -61,6 +65,8 @@ class MedicationItemWidget extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey,
+                      fontSize: 15,
+                      decoration: TextDecoration.none,
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

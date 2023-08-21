@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medisync/config/config.dart';
 
 class DayContainerWidget extends StatelessWidget {
   final VoidCallback onTap;
@@ -25,6 +26,7 @@ class DayContainerWidget extends StatelessWidget {
           ),
         ],
         borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.primary),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

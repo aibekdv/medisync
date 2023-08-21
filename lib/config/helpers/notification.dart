@@ -57,7 +57,6 @@ class NotificationService {
 
     final now = tz.TZDateTime.now(location);
     final today = tz.TZDateTime(location, now.year, now.month, now.day);
-    log("Today: ${today.weekday}");
 
     for (var reminder in reminders) {
       for (var time in reminder.times) {

@@ -18,7 +18,6 @@ class MedicationCubit extends Cubit<MedicationState> {
       final medications = await repository.getAllMedications();
       emit(MedicationLoaded(medications));
     } catch (e) {
-      log(e.toString());
       emit(const MedicationError('Failed to load medications'));
     }
   }

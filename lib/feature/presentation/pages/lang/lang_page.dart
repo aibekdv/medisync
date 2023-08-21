@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medisync/config/config.dart';
-import 'package:medisync/feature/presentation/cubit/lang/lang_cubit.dart';
+import 'package:medisync/feature/presentation/cubit/cubit.dart';
 import 'package:medisync/feature/presentation/pages/pages.dart';
 
 import 'widgets/lang_item_widget.dart';

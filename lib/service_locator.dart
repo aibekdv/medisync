@@ -3,9 +3,8 @@ import 'package:medisync/feature/data/datasources/datasources.dart';
 import 'package:medisync/feature/data/repositories/medicate_repository_impl.dart';
 import 'package:medisync/feature/domain/repositories/medicate_repository.dart';
 import 'package:medisync/feature/domain/usecases/usecases.dart';
-import 'package:medisync/feature/presentation/cubit/lang/lang_cubit.dart';
+import 'package:medisync/feature/presentation/cubit/cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'feature/presentation/cubit/medication/medication_cubit.dart';
 
 // GET_IT INSTANCE
 final sl = GetIt.instance;

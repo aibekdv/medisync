@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medisync/config/constants/constants.dart';
 
 class TimeContainerWidget extends StatelessWidget {
   final VoidCallback onTap;
@@ -13,7 +14,7 @@ class TimeContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 120,
+      width: MediaQuery.of(context).size.width / 2.5,
       height: 40,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -25,6 +26,7 @@ class TimeContainerWidget extends StatelessWidget {
           ),
         ],
         borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.primary),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
