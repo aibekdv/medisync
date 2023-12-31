@@ -1,6 +1,6 @@
 # Medisync - Medication Tracking App 🌡️💊
 
-Medisync is a mobile application designed to help users efficiently manage their medication schedules, receive automatic reminders, and stay on top of their personal health. Whether you're juggling multiple medications or need assistance in adhering to a specific regimen, Medisync is here to simplify and streamline the process.
+MediSync is your reliable companion for never missing a dose of your important medications. Our user-friendly app sends timely reminders to ensure you stay on top of your medication schedule. Set up customized reminders for each medication and receive notifications that help you remember when it's time to take your pills.
 
 ## Features 🚀
 
